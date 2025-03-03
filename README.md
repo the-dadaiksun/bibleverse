@@ -13,9 +13,28 @@
         
         body {
             font-family: 'Noto Serif KR', serif;
-            background-color: #ffffff;
-        }
-
+            /* background-image: url('image/homepage.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed; */
+         }
+         body::before {
+  content: "";
+  background-image: url('image/bg01.jpg');/*배경이미지(바꾸고싶음 여기*/
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.3; /* 투명도 조절 (0.1~0.5 사이 값이 적당) */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+     
         .verse-transition {
             transition: opacity 0.3s ease;
         }
@@ -50,7 +69,7 @@
             <!-- 말씀 섹션 -->
             <div class="verse-container py-12 px-4">
                 <div class="space-y-6">
-                    <div id="verse" class="verse-transition text-gray-800 text-2xl leading-relaxed font-light"></div>
+                    <div id="verse" class="verse-transition text-gray-800 text-2xl leading-relaxed font-light" style="word-break: keep-all;"></div>
                     <div id="reference" class="verse-transition text-gray-500 text-lg"></div>
                 </div>
             </div>
@@ -1142,6 +1161,10 @@
     {
         text: "주의 성령으로 말미암아 나를 바른 길로 인도하소서",
         reference: "시편 143:10"
+    },
+    {
+        text: "그 주인이 이르되 잘 하였도다 착하고 충성된 종아 네가 적은 일에 충성하였으매 내가 많은 것을 네게 맡기리니 네 주인의 즐거움에 참여할지어다",
+        reference: "마태복음 25:23"
     }
 ];
 
